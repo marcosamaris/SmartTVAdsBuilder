@@ -5,10 +5,10 @@ O mesmo é uma ferramenta onde em poucos minutos é possível montar uma propaga
 O programa é divido em telas, onde em cada uma delas é possível fazer alterações na propaganda que deseja construir, as telas são para alteração de: *template*, nome dos produtos, descrição dos produtos, leiaute dos botões, *background* (Tela de fundo) e vídeo (propaganda) e cor e tamanho da fonte.
 
 ## Autores
-Eng. David Rafael Demétrio e Silva (QEPD)
-Tec. MS Andrei Luiz Demétrio e Silva
-Prof. Dr. Marcos Amaris
+Eng. David Rafael Demétrio e Silva (QEPD)  
+Tec. MS Andrei Luiz Demétrio e Silva  
+Prof. Dr. Marcos Amaris  
 
-Universidade Federal do Pará
-Campus Tucuruí
-Faculdade de Engenharia de Computação
+Universidade Federal do Pará  
+Campus Tucuruí  
+Faculdade de Engenharia de Computação  
