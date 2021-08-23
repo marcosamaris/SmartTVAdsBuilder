@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ncl id="focus" xmlns="http://www.ncl.org.br/NCL3.0/EDTVProfile"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.ncl.org.br/NCL3.0/EDTVProfile
+http://www.ncl.org.br/NCL3.0/profiles/NCL30EDTV.xsd">
+<head>
+
+<!--region-->
+  <regionBase>
+    <region id="mainDevice" width="100%" height="100%">
+      <region id="rgV" width="100%" height="100%" zIndex="6"/>
+      <region id="rB1" left="10%" top="10%" width="20%" height="7%" zIndex="6"/>
+      <region id="rT1" left="15%" top="12%" width="20%" height="6%" zIndex="7"/>	
+      <region id="rB2" left="10%" top="20%" width="20%" height="7%" zIndex="6"/>
+      <region id="rT2" left="15%" top="22%" width="20%" height="6%" zIndex="7"/>
+      <region id="rB3" left="10%" top="30%" width="20%" height="7%" zIndex="6"/>
+      <region id="rT3" left="15%" top="32%" width="20%" height="6%" zIndex="7"/>
+      <region id="rB4" left="10%" top="40%" width="20%" height="7%" zIndex="6"/>
+      <region id="rT4" left="15%" top="42%" width="20%" height="6%" zIndex="7"/>
+      <region id="rD"  left="5%" bottom="5%" width="85%" height="25%" zIndex="6"/>
+      <region id="rT5"  left="10%" bottom="2%" width="85%" height="25%" zIndex="7"/>
+      <region id="rT6"  left="10%" bottom="2%" width="85%" height="25%" zIndex="7"/>
+      <region id="rT7"  left="10%" bottom="2%" width="85%" height="25%" zIndex="7"/>
+      <region id="rT8"  left="10%" bottom="2%" width="85%" height="25%" zIndex="7"/>
+      <region id="rB5"  left="1%" top="1%" width="2%" height="2%" zIndex="7"/>
+      <region id="rB6"  left="1%" top="1%" width="2%" height="2%" zIndex="7"/>
+      
+    </region>
+  </regionBase>
+  
+  
+<!--descriptor-->
+  <descriptorBase>
+  	
+  	<descriptor id="dmainDevice" region="mainDevice"/>
+  	<descriptor id="dV" region="rgV"/>
+        
+    <descriptor id="dF" region="rB5"/>
+
+    <descriptor id="dB1" region="rB1"
+     focusIndex="1"
+     moveUp="4" moveDown="2"/>
+
+    <descriptor id="dB2" region="rB2"
+     focusIndex="2"
+     moveUp="1" moveDown="3"/>
+
+
+    <descriptor id="dB3" region="rB3"
+     focusIndex="3"
+     moveUp="2" moveDown="4"/>
+
+
+    <descriptor id="dB4" region="rB4"
+     focusIndex="4"
+     moveUp="3" moveDown="1"/>
+
+
+    <descriptor id="dT1" region="rT1">
+       
+    </descriptor>
+    
+    <descriptor id="dT2" region="rT2"/>   
+    <descriptor id="dT3" region="rT3"/>    
+    <descriptor id="dT4" region="rT4"/>    
+    <descriptor id="dD" region="rD"/>    
+    <descriptor id="dT5" region="rT5"/>       
+    <descriptor id="dT6" region="rT6"/>       
+    <descriptor id="dT7" region="rT7"/>
+    <descriptor id="dT8" region="rT8"/>
+
+
+  </descriptorBase>
+  
+  
+<!--conector-->
+  <connectorBase>
+    <causalConnector id="onBeginStart">
+      <simpleCondition role="onBegin"/>
+      <simpleAction role="start" max="unbounded" qualifier="par"/>
+    </causalConnector>
+
+      
+    <causalConnector id="onSelectionStop">
+      	<simpleCondition role="onSelection" key="RED"/>
+      <simpleAction role="stop" max="unbounded" qualifier="par"/>
+    </causalConnector>
+
+	<causalConnector id="onSelectionStopStart">
+		<simpleCondition role="onSelection"/>
+		<compoundAction operator="par">
+			<simpleAction role="stop" max="unbounded"/>
+			<simpleAction role="start" max = "unbounded"/>
+		</compoundAction>
+	</causalConnector>
+	
+	<causalConnector id="onSelectionSetStartStop">
+		<connectorParam name="var"/>
+		<simpleCondition role="onSelection" key="RED"/>
+		<compoundAction operator="par">
+			<simpleAction role="set" value="$var" max="unbounded" qualifier="par"/>
+			<simpleAction role="start" max="unbounded" qualifier="par"/>
+			<simpleAction role="stop" max="unbounded" qualifier="par"/>
+		</compoundAction>
+	</causalConnector>
+    
+  </connectorBase>
+
+</head>
+
+<body>
+	<!--porta-->
+  <port id="entrada" component="s"/>

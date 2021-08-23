@@ -1,0 +1,53 @@
+<!--media-->
+  <media id="planoFundo" src="img/TELA.jpg"
+  descriptor="dmainDevice"/>
+  <media descriptor="dV" id="s" src="C:\Users\Andrei\Documents\TCC_2\Comercial - Viva La Fruta.mp4">
+  	<property name="bounds"/>
+  </media>
+  <media descriptor="dB1" id="b1" src="/misc/ncl30/sample03/img/branco.jpg"/>
+  <media descriptor="dB2" id="b2" src="img/branco.jpg"/>
+  <media descriptor="dB3" id="b3" src="img/branco.jpg"/>
+  <media descriptor="dB4" id="b4" src="img/branco.jpg"/>
+  <media descriptor="dF" id="b5" src="img/descbranco.jpg"/>
+  <media descriptor="dF" id="b6" src="img/descbranco.jpg"/>
+  <media descriptor="dT1" id="t1" src="txt/text1.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="10"/>
+    <property name="fontColor" value="black"/>
+     </media>
+  <media descriptor="dT2" id="t2" src="txt/text2.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="10"/>
+    <property name="fontColor" value="black"/>
+     </media>    
+   <media descriptor="dT3" id="t3" src="txt/text3.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="10"/>
+    <property name="fontColor" value="black"/>
+     </media>
+   <media descriptor="dT4" id="t4" src="txt/text4.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="10"/>
+    <property name="fontColor" value="black"/>
+     </media>    
+   <media descriptor="dT5" id="t5" src="txt/textProd1.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="12"/>
+    <property name="fontColor" value="black"/>
+     </media>
+   <media descriptor="dT6" id="t6" src="txt/textProd2.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="12"/>
+    <property name="fontColor" value="black"/>
+     </media>     
+   <media descriptor="dT7" id="t7" src="txt/textProd3.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="12"/>
+    <property name="fontColor" value="black"/>
+     </media>    
+   <media descriptor="dT8" id="t8" src="txt/textProd4.txt">
+    <property name="fontUri"/>
+    <property name="fontSize" value="12"/>
+    <property name="fontColor" value="black"/>
+     </media>   
+	<media id="D" descriptor="dD" src="img/branco.jpg"/>

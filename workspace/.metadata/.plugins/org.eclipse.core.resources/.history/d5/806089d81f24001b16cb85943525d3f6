@@ -1,0 +1,88 @@
+package interfaceG;
+
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.Normalizer.Form;
+
+import javax.swing.*;
+
+import net.miginfocom.swing.MigLayout;
+
+public class TelaInicial extends JFrame {
+
+	public TelaInicial() {
+		super("SmartTV Ads Builder");
+		//componentes
+		//label
+		Font f = new Font("SansSerif", Font.BOLD, 20);
+		
+		JLabel l0 = new JLabel("                                ");
+		JLabel l3 = new JLabel("                                ");
+		JLabel l5 = new JLabel("                                ");
+		JLabel l1 = new JLabel("Bem vindo ao SmartTV Ads Builder");
+		l1.setFont(f);
+		JLabel l2 = new JLabel("Selecione um template:");
+		JLabel l4 = new JLabel();
+		
+		//Templates
+		String[] templates = {"Template 1", "Template 2", "Template 3", "Template 4", "Template 5"};
+		String[] caminho = new String[5];
+		caminho[0]= "C:/Users/Andrei/Documents/GitHub/TCC/img/TELAE.jpg";
+		
+		//combobox
+		JComboBox CaixaT = new JComboBox(templates);
+		
+		//Botões
+		JButton b1 = new JButton("Próximo");
+		
+		//painel
+		JPanel panel = new JPanel();
+		MigLayout layout = new MigLayout("","[][]","[]50[][]");
+		panel.setLayout(layout);
+		
+		//linha 1
+		panel.add(l0);
+		panel.add(l3);
+		panel.add(l5);
+		panel.add(l1,"wrap");
+		
+		//linha 2
+		panel.add(l2);
+		panel.add(CaixaT);
+		panel.add(l4,"wrap");
+		
+		//linha 3
+		panel.add(b1);
+		
+		//ações dos botões
+		
+		CaixaT.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if (CaixaT.getSelectedIndex()==0){
+					ImageIcon img = new ImageIcon (caminho[0].toString());
+					l4.setIcon(img);
+				}
+			}
+		});
+		
+		
+		
+		
+		//JFrame
+		add(panel);
+		setVisible(true);
+		setSize(1000, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);	
+	}
+	
+	public static void main(String[] args) {
+		new TelaInicial();
+	}
+
+}

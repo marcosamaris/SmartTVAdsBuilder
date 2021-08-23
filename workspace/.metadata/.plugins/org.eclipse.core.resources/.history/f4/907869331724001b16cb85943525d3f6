@@ -1,0 +1,57 @@
+package interfaceG;
+
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+import net.miginfocom.swing.MigLayout;
+
+public class TelaInicial extends JFrame {
+
+	public TelaInicial() {
+		//componentes
+		//label
+		JLabel l0 = new JLabel("                           ");
+		JLabel l1 = new JLabel("Bem vindo ao SmartTV Ads Builder");
+		JLabel l2 = new JLabel("Selecione um template:");
+		
+		//Templates
+		String[] templates = {"Template 1", "Template 2", "Template 3", "Template 4", "Template 5"};
+		
+		//combobox
+		JComboBox CaixaT = new JComboBox(templates);
+		
+		//Botões
+		JButton b1 = new JButton("Próximo");
+		
+		//painel
+		JPanel panel = new JPanel();
+		MigLayout layout = new MigLayout();
+		panel.setLayout(layout);
+		
+		//linha 1
+		panel.add(l0);
+		panel.add(l1,"wrap");
+		
+		//linha 2
+		panel.add(l2);
+		panel.add(CaixaT,"wrap");
+		
+		//linha 3
+		panel.add(b1);
+		
+		//JFrame
+		add(panel);
+		setVisible(true);
+		setSize(800, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);	
+	}
+	
+	public static void main(String[] args) {
+		new TelaInicial();
+	}
+
+}

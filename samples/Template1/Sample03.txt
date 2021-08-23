@@ -1,0 +1,86 @@
+<!--elos-->
+  
+ <link xconnector="onBeginStart">
+ 	<bind role="onBegin" component="s"/>
+ 	<bind role="start" component="b6"/>
+ </link>
+  
+ <link xconnector="onSelectionSetStartStop">
+ 	<bind role="onSelection" component="b6"/>
+ 	<bind role="set" component="s" interface="bounds">
+ 		<bindParam name="var" value="35%, 5%, 60%, 60%"/>	 	
+	 </bind>
+	<bind role="start" component="planoFundo"/>
+    <bind component="b1" role="start"/>
+    <bind component="b2" role="start"/>
+    <bind component="b3" role="start"/>
+    <bind component="b4" role="start"/>
+    <bind component="t1" role="start"/>
+    <bind component="t2" role="start"/>
+    <bind component="t3" role="start"/>
+    <bind component="t4" role="start"/>
+    <bind component="b5" role="start"/>
+    <bind role="start" component="D"/>
+    <bind role="stop" component="b6"/>
+	 	
+ </link>
+
+  <link id="linkTransicaoPraia" xconnector="onSelectionStop">
+    <bind component="b5" role="onSelection"/>
+    <bind component="s" role="stop"/>
+    <bind component="b1" role="stop"/>
+    <bind component="b2" role="stop"/>
+    <bind component="b3" role="stop"/>
+    <bind component="b4" role="stop"/>
+    <bind role="stop" component="b5"/>
+    <bind component="t1" role="stop"/>
+    <bind component="t2" role="stop"/>
+    <bind component="t3" role="stop"/>
+    <bind component="t4" role="stop"/>
+    <bind component="t5" role="stop"/>
+    <bind component="t6" role="stop"/>
+    <bind component="t7" role="stop"/>
+    <bind component="t8" role="stop"/>
+    <bind role="stop" component="planoFundo"/>
+    <bind role="stop" component="D"/>
+  </link>
+
+
+	<link xconnector="onSelectionStopStart">
+		<bind role="onSelection" component="b1"/>
+		<bind role="stop" component="t6"/>
+		<bind role="stop" component="t7"/>
+		<bind role="stop" component="t8"/>
+		<bind role="start" component="t5"/>
+		
+	</link>
+	
+	<link xconnector="onSelectionStopStart">
+		<bind role="onSelection" component="b2"/>
+		<bind role="stop" component="t5"/>
+		<bind role="stop" component="t7"/>
+		<bind role="stop" component="t8"/>
+		<bind role="start" component="t6"/>
+		
+	</link>
+	
+	<link xconnector="onSelectionStopStart">
+		<bind role="onSelection" component="b3"/>
+		<bind role="stop" component="t5"/>
+		<bind role="stop" component="t6"/>
+		<bind role="stop" component="t8"/>
+		<bind role="start" component="t7"/>
+		
+	</link>
+	
+	<link xconnector="onSelectionStopStart">
+		<bind role="onSelection" component="b4"/>
+		<bind role="stop" component="t5"/>
+		<bind role="stop" component="t6"/>
+		<bind role="stop" component="t7"/>
+		<bind role="start" component="t8"/>
+		
+	</link>
+	
+</body>
+</ncl>
